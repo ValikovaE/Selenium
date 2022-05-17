@@ -21,7 +21,7 @@ namespace AdvanceTestWithPageObjectModel.PageObjectModel
         public void CheckOpportunitiesButtonText(string expectedResult)
         {
 
-            string actualResult = wait.Until(ExpectedConditions.ElementIsVisible(addNewOpportunities)).Text;
+            string actualResult = WrappedWait.Until(ExpectedConditions.ElementIsVisible(addNewOpportunities)).Text;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }

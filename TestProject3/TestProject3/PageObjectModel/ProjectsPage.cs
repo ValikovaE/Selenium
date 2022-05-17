@@ -18,7 +18,7 @@ namespace AdvanceTestWithPageObjectModel.PageObjectModel
    public void CheckProjectButtonText(string expectedResult)
     {
 
-            string actualResult = wait.Until(ExpectedConditions.ElementIsVisible(addProjectButton)).Text;
+            string actualResult = WrappedWait.Until(ExpectedConditions.ElementIsVisible(addProjectButton)).Text;
             Assert.AreEqual(expectedResult, actualResult);
 
         }

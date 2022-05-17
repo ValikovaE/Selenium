@@ -14,7 +14,7 @@ namespace AdvanceTestWithPageObjectModel.Tests
 
         public void EmployeeSearch()
         {
-            LogInPage logInPage = new LogInPage(driver);
+            LogInPage logInPage = new LogInPage();
             logInPage.ClickLogInButton()
                 .SetEmailAndContinue("automation.pp@amdaris.com")
                 .SetPasswordAndSubmit("10704-observe-MODERN-products-STRAIGHT-69112")

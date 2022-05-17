@@ -22,7 +22,7 @@ namespace AdvanceTestWithPageObjectModel.PageObjectModel
         public void CheckClientButtonText(string expectedResult)
         {
 
-            string actualResult = wait.Until(ExpectedConditions.ElementIsVisible(addClientButton)).Text;
+            string actualResult = WrappedWait.Until(ExpectedConditions.ElementIsVisible(addClientButton)).Text;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }

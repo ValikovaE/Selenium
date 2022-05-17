@@ -18,7 +18,13 @@ namespace AdvanceTestWithPageObjectModel.PageObjectModel
         public LogInPage(IWebDriver driver) : base(driver)
         {
         }
+        public LogInPage() : base()
+        {
+           
+                
 
+            
+        }
         public EmailPage ClickLogInButton()
         {
             WaitAndClick(logInButton);

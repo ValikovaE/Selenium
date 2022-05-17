@@ -24,11 +24,11 @@ namespace AdvanceTestWithPageObjectModel.PageObjectModel
         }
         
        
-        public void SetInvalidEmailAndCheckMessage(string expectedResult,string email)
+        public void SetInvalidEmailAndCheckMessage(string email,string expectedResult)
         {
             WaitAndSendKeys(emailField, email);
             WaitAndClick(nextButton);
-            string actualResult = wait.Until(ExpectedConditions.ElementIsVisible(errorMessage)).Text;
+            string actualResult = WrappedWait.Until(ExpectedConditions.ElementIsVisible(errorMessage)).Text;
             Assert.AreEqual(expectedResult, actualResult);
             
         }

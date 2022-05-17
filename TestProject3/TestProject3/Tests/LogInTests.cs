@@ -12,9 +12,9 @@ namespace AdvanceTestWithPageObjectModel.Tests
     [Test]
     public void WrongDataLogin()
     {
-        LogInPage logInPage = new LogInPage(driver);
+        LogInPage logInPage = new LogInPage();
         logInPage.ClickLogInButton()
-            .SetInvalidEmailAndCheckMessage("Hi", "We couldn't find an account with that username.");
+            .SetInvalidEmailAndCheckMessage("Hi@AA.AA", "We couldn't find an account with that username.");
 
 
 
@@ -25,7 +25,7 @@ namespace AdvanceTestWithPageObjectModel.Tests
     [Test]
     public void SuccesLoginCorrectDataAndViewContacts()
     {
-        LogInPage logInPage = new LogInPage(driver);
+        LogInPage logInPage = new LogInPage();
         logInPage.ClickLogInButton()
         .SetEmailAndContinue("automation.pp@amdaris.com")
         .SetPasswordAndSubmit("10704-observe-MODERN-products-STRAIGHT-69112")

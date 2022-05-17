@@ -19,7 +19,7 @@ namespace AdvanceTestWithPageObjectModel.PageObjectModel
         public void CheckContactButtonText(string expectedResult)
         {
 
-            string actualResult = wait.Until(ExpectedConditions.ElementIsVisible(addContactButton)).Text;
+            string actualResult = WrappedWait.Until(ExpectedConditions.ElementIsVisible(addContactButton)).Text;
         Assert.AreEqual(expectedResult, actualResult);
         }
 }

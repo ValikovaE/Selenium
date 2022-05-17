@@ -12,7 +12,7 @@ namespace AdvanceTestWithPageObjectModel.Tests
         [Test]
         public void ClientsView()
         {
-            LogInPage logInPage = new LogInPage(driver);
+            LogInPage logInPage = new LogInPage();
             logInPage.ClickLogInButton()
                 .SetEmailAndContinue("automation.pp@amdaris.com")
                 .SetPasswordAndSubmit("10704-observe-MODERN-products-STRAIGHT-69112")
