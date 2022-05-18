@@ -14,15 +14,9 @@ namespace AdvanceTestWithPageObjectModel.Settings
         [SetUp]
           public void Setup()
           {
-            
+
             Driver.StartBrowser();
-
-              
-             // driver.Navigate().GoToUrl("https://projectplanappweb-stage.azurewebsites.net/login");
-
-             // driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2000);
-             // wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3200));
-          }
+        }
         [TearDown]
         public void TearDown()
         {

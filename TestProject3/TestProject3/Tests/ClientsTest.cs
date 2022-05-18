@@ -7,32 +7,21 @@ using AdvanceTestWithPageObjectModel.Settings;
 
 namespace AdvanceTestWithPageObjectModel.Tests
 {
-    class Opportunities:Base
+    class ClientsTest:Base
     {
-
         [Test]
-
-        public void EmployeeSearch()
+        public void ClientsView()
         {
             LogInPage logInPage = new LogInPage();
             logInPage.ClickLogInButton()
                 .SetEmailAndContinue("automation.pp@amdaris.com")
                 .SetPasswordAndSubmit("10704-observe-MODERN-products-STRAIGHT-69112")
                 .ClickSubmitButton()
-                .GoToOpportunitiesFromMenu()
-                .CheckOpportunitiesButtonText("Add Opportunity");
 
-
-
-
-
-
-
-
-
-
+                .GoToClientsFromMenu()
+                .CheckClientButtonText("Add Client");
 
 
         }
-        }
+    }
 }
